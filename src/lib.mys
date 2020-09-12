@@ -14,9 +14,7 @@ def random() -> float:
 
     """
 
-    '''mys-embedded-c++
-    return distribution(generator);
-    '''
+    return 'mys-embedded-c++ distribution(generator)'
 
 @test
 def test_random():
