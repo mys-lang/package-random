@@ -1,4 +1,5 @@
 [package]
 name = "random"
-version = "0.1.0"
+version = "0.2.0"
 authors = ["Erik Moqvist <erik.moqvist@gmail.com>"]
+description = "Random numbers."
