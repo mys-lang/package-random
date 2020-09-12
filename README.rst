@@ -3,7 +3,7 @@
 Random
 ======
 
-Random numbers package for the `Mys programming language`.
+Random numbers package for the `Mys programming language`_.
 
 Examples
 ========
