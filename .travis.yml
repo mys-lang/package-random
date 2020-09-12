@@ -17,3 +17,4 @@ install:
 script:
   - mys lint
   - env CXX=g++-9 mys test
+  - env CXX=g++-9 mys run

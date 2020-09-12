@@ -3,17 +3,17 @@
 Random
 ======
 
-This package provides...
+Random numbers package for the Mys programming language.
 
 Examples
 ========
 
 .. code-block:: python
 
-   from random import add
+   from random import random
 
    def main():
-       print('1 + 2 =', add(1, 2))
+       print(random())
 
-.. |buildstatus| image:: https://travis-ci.com/<user>/random.svg?branch=master
-.. _buildstatus: https://travis-ci.com/<user>/random
+.. |buildstatus| image:: https://travis-ci.com/eerimoq/mys-random.svg?branch=master
+.. _buildstatus: https://travis-ci.com/eerimoq/mys-random
