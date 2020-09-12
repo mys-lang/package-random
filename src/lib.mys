@@ -1,6 +1,25 @@
-def add(first: int, second: int) -> int:
-    return first + second
+'''mys-embedded-c++-before-namespace
+#include <chrono>
+#include <random>
+'''
+
+'''mys-embedded-c++
+static std::default_random_engine generator(
+    std::chrono::system_clock::now().time_since_epoch().count());
+static std::uniform_real_distribution<float> distribution(0.0, 1.0);
+'''
+
+def random() -> float:
+    """Returns a random number between 0 and 1 (including 0 and 1).
+
+    """
+
+    '''mys-embedded-c++
+    return distribution(generator);
+    '''
 
 @test
-def test_add():
-    assert_eq(add(1, 2), 3)
+def test_random():
+    value: float = random()
+    assert_ge(value, 0.0)
+    assert_le(value, 1.0)
