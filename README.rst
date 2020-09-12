@@ -3,7 +3,7 @@
 Random
 ======
 
-Random numbers package for the Mys programming language.
+Random numbers package for the `Mys programming language`.
 
 Examples
 ========
@@ -17,3 +17,5 @@ Examples
 
 .. |buildstatus| image:: https://travis-ci.com/eerimoq/mys-random.svg?branch=master
 .. _buildstatus: https://travis-ci.com/eerimoq/mys-random
+
+.. _Mys programming language: https://github.com/eerimoq/mys
