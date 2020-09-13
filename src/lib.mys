@@ -21,8 +21,6 @@ def random() -> float:
     return distribution(generator)
     '''
 
-    return 'mys-embedded-c++ distribution(generator)'
-
 def randint(minimum: int, maximum: int) -> int:
     """Returns a random integer number in the range [minimum, maximum].
 
