@@ -6,18 +6,60 @@
 '''mys-embedded-c++
 static thread_local std::default_random_engine generator(
     std::chrono::system_clock::now().time_since_epoch().count());
-static std::uniform_real_distribution<float> distribution(0.0, 1.0);
 '''
 
 def random() -> float:
-    """Returns a random number between 0 and 1 (including 0 and 1).
+    """Returns a random floating point number in the range [0.0, 1.0].
 
     """
 
+    '''mys-embedded-c++
+    std::uniform_real_distribution<float> distribution(0.0, 1.0);
+
+    return distribution(generator)
+    '''
+
     return 'mys-embedded-c++ distribution(generator)'
+
+def randint(minimum: int, maximum: int) -> int:
+    """Returns a random integer number in the range [minimum, maximum].
+
+    """
+
+    '''mys-embedded-c++
+    std::uniform_int_distribution<int> distribution(minimum, maximum);
+
+    return distribution(generator)
+    '''
+
+def randfloat(minimum: float, maximum: float) -> float:
+    """Returns a random floating point number in the range [minimum,
+    maximum].
+
+    """
+
+    '''mys-embedded-c++
+    std::uniform_real_distribution<float> distribution(minimum, maximum);
+
+    return distribution(generator)
+    '''
 
 @test
 def test_random():
     value: float = random()
     assert_ge(value, 0.0)
     assert_le(value, 1.0)
+
+@test
+def test_randint():
+    value: int = randint(-1, 2)
+    assert_ge(value, -1)
+    assert_le(value, 2)
+    values: [int] = [-1, 0, 1, 2]
+    assert_in(value, values)
+
+@test
+def test_randfloat():
+    value: int = randfloat(-2.5, 2.0)
+    assert_ge(value, -2.51)
+    assert_le(value, 2.01)
