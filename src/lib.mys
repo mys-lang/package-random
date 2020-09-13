@@ -1,3 +1,5 @@
+# pylint:disable=unused-argument
+
 '''mys-embedded-c++-before-namespace
 #include <chrono>
 #include <random>
