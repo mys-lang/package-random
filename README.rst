@@ -50,7 +50,7 @@ pseudo random numbers.
 
     random():             0.984442
     randint(-5, 10):      -5
-    randfloat(-1.0, 3.5): 3.53477
+    randfloat(-1.0, 3.5): 3.23477
     randbytes(5):         b'\x42\xff\x51\x89\xab'
 
 .. |buildstatus| image:: https://travis-ci.com/eerimoq/mys-random.svg?branch=master
