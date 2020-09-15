@@ -1,11 +1,11 @@
-from random.pseudo import random as pseudo_random
-from random.pseudo import randint as pseudo_randint
-from random.pseudo import randfloat as pseudo_randfloat
-# from random.pseudo import randbytes as pseudo_randbytes
-from random.crypto import random as crypto_random
-from random.crypto import randint as crypto_randint
-from random.crypto import randfloat as crypto_randfloat
-# from random.crypto import randbytes as crypto_randbytes
+from .pseudo import random as pseudo_random
+from .pseudo import randint as pseudo_randint
+from .pseudo import randfloat as pseudo_randfloat
+# from .pseudo import randbytes as pseudo_randbytes
+from .crypto import random as crypto_random
+from .crypto import randint as crypto_randint
+from .crypto import randfloat as crypto_randfloat
+# from .crypto import randbytes as crypto_randbytes
 
 def main():
     print('pseudo_random():            ', pseudo_random())
