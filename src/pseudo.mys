@@ -1,14 +1,14 @@
 # pylint:disable=unused-argument
 
-'''mys-embedded-c++-before-namespace
+"""mys-embedded-c++-before-namespace
 #include <chrono>
 #include <random>
-'''
+"""
 
-'''mys-embedded-c++
+"""mys-embedded-c++
 static thread_local std::default_random_engine generator(
     std::chrono::system_clock::now().time_since_epoch().count());
-'''
+"""
 
 def random() -> f32:
     """Returns a pseudo random floating point number in the range [0.0,
@@ -16,11 +16,11 @@ def random() -> f32:
 
     """
 
-    '''mys-embedded-c++
+    """mys-embedded-c++
     std::uniform_real_distribution<f32> distribution(0.0, 1.0);
 
     return distribution(generator)
-    '''
+    """
 
 def randint(minimum: i32, maximum: i32) -> i32:
     """Returns a pseudo random integer number in the range [minimum,
@@ -28,11 +28,11 @@ def randint(minimum: i32, maximum: i32) -> i32:
 
     """
 
-    '''mys-embedded-c++
+    """mys-embedded-c++
     std::uniform_int_distribution<i32> distribution(minimum, maximum);
 
     return distribution(generator)
-    '''
+    """
 
 def randfloat(minimum: f32, maximum: f32) -> f32:
     """Returns a pseudo random floating point number in the range
@@ -40,11 +40,11 @@ def randfloat(minimum: f32, maximum: f32) -> f32:
 
     """
 
-    '''mys-embedded-c++
+    """mys-embedded-c++
     std::uniform_real_distribution<f32> distribution(minimum, maximum);
 
     return distribution(generator)
-    '''
+    """
 
 # def randbytes(length: u32) -> bytes:
 #     """Returns given number of pseudo random bytes.

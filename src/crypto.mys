@@ -1,12 +1,12 @@
 # pylint:disable=unused-argument
 
-'''mys-embedded-c++-before-namespace
+"""mys-embedded-c++-before-namespace
 #include <random>
-'''
+"""
 
-'''mys-embedded-c++
+"""mys-embedded-c++
 static thread_local std::random_device device;
-'''
+"""
 
 def random() -> f32:
     """Returns a cryptographically safe random floating point number in
@@ -14,11 +14,11 @@ def random() -> f32:
 
     """
 
-    '''mys-embedded-c++
+    """mys-embedded-c++
     std::uniform_real_distribution<f32> distribution(0.0, 1.0);
 
     return distribution(device)
-    '''
+    """
 
 def randint(minimum: i32, maximum: i32) -> i32:
     """Returns a cryptographically safe random integer number in the range
@@ -26,11 +26,11 @@ def randint(minimum: i32, maximum: i32) -> i32:
 
     """
 
-    '''mys-embedded-c++
+    """mys-embedded-c++
     std::uniform_int_distribution<i32> distribution(minimum, maximum);
 
     return distribution(device)
-    '''
+    """
 
 def randfloat(minimum: f32, maximum: f32) -> f32:
     """Returns a cryptographically safe random floating point number in
@@ -38,11 +38,11 @@ def randfloat(minimum: f32, maximum: f32) -> f32:
 
     """
 
-    '''mys-embedded-c++
+    """mys-embedded-c++
     std::uniform_real_distribution<f32> distribution(minimum, maximum);
 
     return distribution(device)
-    '''
+    """
 
 # def randbytes(length: u32) -> bytes:
 #     """Returns given number of cryptographically safe random bytes.
