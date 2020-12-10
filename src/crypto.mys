@@ -14,11 +14,15 @@ def random() -> f32:
 
     """
 
+    value: f32 = 0.0
+
     """mys-embedded-c++
     std::uniform_real_distribution<f32> distribution(0.0, 1.0);
 
-    return distribution(device)
+    value = distribution(device)
     """
+
+    return value
 
 def randint(minimum: i32, maximum: i32) -> i32:
     """Returns a cryptographically safe random integer number in the range
@@ -26,11 +30,15 @@ def randint(minimum: i32, maximum: i32) -> i32:
 
     """
 
+    value: i32 = 0
+
     """mys-embedded-c++
     std::uniform_int_distribution<i32> distribution(minimum, maximum);
 
-    return distribution(device)
+    value = distribution(device)
     """
+
+    return value
 
 def randfloat(minimum: f32, maximum: f32) -> f32:
     """Returns a cryptographically safe random floating point number in
@@ -38,11 +46,15 @@ def randfloat(minimum: f32, maximum: f32) -> f32:
 
     """
 
+    value: f32 = 0.0
+
     """mys-embedded-c++
     std::uniform_real_distribution<f32> distribution(minimum, maximum);
 
-    return distribution(device)
+    value = distribution(device)
     """
+
+    return value
 
 # def randbytes(length: u32) -> bytes:
 #     """Returns given number of cryptographically safe random bytes.
@@ -58,13 +70,13 @@ def randfloat(minimum: f32, maximum: f32) -> f32:
 
 @test
 def test_random():
-    value: f32 = random()
+    value = random()
     assert_ge(value, 0.0)
     assert_le(value, 1.0)
 
 @test
 def test_randint():
-    value: i32 = randint(-1, 2)
+    value = randint(-1, 2)
     assert_ge(value, -1)
     assert_le(value, 2)
     values: [i32] = [-1, 0, 1, 2]
@@ -72,7 +84,7 @@ def test_randint():
 
 @test
 def test_randfloat():
-    value: f32 = randfloat(-2.5, 2.0)
+    value = randfloat(-2.5, 2.0)
     assert_ge(value, -2.51)
     assert_le(value, 2.01)
 
