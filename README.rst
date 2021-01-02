@@ -1,5 +1,3 @@
-|buildstatus|_
-
 Random
 ======
 
@@ -53,7 +51,4 @@ pseudo random numbers.
     randfloat(-1.0, 3.5): 3.23477
     randbytes(5):         b'\x42\xff\x51\x89\xab'
 
-.. |buildstatus| image:: https://travis-ci.com/eerimoq/mys-random.svg?branch=master
-.. _buildstatus: https://travis-ci.com/eerimoq/mys-random
-
-.. _Mys programming language: https://github.com/eerimoq/mys
+.. _Mys programming language: https://github.com/mys-lang/mys
