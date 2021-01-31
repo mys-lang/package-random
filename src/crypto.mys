@@ -1,6 +1,6 @@
 # pylint:disable=unused-argument
 
-"""mys-embedded-c++-before-namespace
+c"""source-before-namespace
 #include <random>
 """
 
