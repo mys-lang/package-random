@@ -58,17 +58,17 @@ def randfloat(minimum: f64, maximum: f64) -> f64:
 
     return value
 
-# def randbytes(length: u32) -> bytes:
-#     """Returns given number of pseudo random bytes.
-#
-#     """
-#
-#     result: bytes = bytes(length)
-#
-#     for i in range(length):
-#         result[i] = randint(0, 255)
-#
-#     return result
+def randbytes(length: u32) -> bytes:
+    """Returns given number of pseudo random bytes.
+
+    """
+
+    value = b""
+
+    for i in range(i64(length)):
+        value += u8(randint(0, 255))
+
+    return value
 
 @test
 def test_random():
@@ -90,7 +90,7 @@ def test_randfloat():
     assert value >= -2.51
     assert value <= 2.01
 
-# @test
-# def test_randbytes():
-#     assert_eq(len(randbytes(0)), 0)
-#     assert_eq(len(randbytes(5)), 5)
+@test
+def test_randbytes():
+    assert len(randbytes(0)) == 0
+    assert len(randbytes(5)) == 5
