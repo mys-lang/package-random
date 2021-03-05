@@ -6,13 +6,13 @@ c"""source-before-namespace
 """
 
 c"""
-static thread_local std::default_random_engine generator(
+static std::default_random_engine generator(
     std::chrono::system_clock::now().time_since_epoch().count());
 """
 
 def random() -> f64:
     """Returns a pseudo random floating point number in the range [0.0,
-    1.0].
+    1.0] (inclusive).
 
     """
 
@@ -28,7 +28,7 @@ def random() -> f64:
 
 def randint(minimum: i64, maximum: i64) -> i64:
     """Returns a pseudo random integer number in the range [minimum,
-    maximum].
+    maximum] (inclusive).
 
     """
 
@@ -44,7 +44,7 @@ def randint(minimum: i64, maximum: i64) -> i64:
 
 def randfloat(minimum: f64, maximum: f64) -> f64:
     """Returns a pseudo random floating point number in the range
-    [minimum, maximum].
+    [minimum, maximum] (inclusive).
 
     """
 

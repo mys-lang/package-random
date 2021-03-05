@@ -19,4 +19,7 @@ jobs:
         pip install mys
     - name: Test
       run: |
-        mys test
+        mys test -j 3
+    - name: Examples
+      run: |
+        mys -C examples/basic run -j 3

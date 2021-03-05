@@ -1,0 +1,19 @@
+from random.crypto import randbytes as crypto_randbytes
+from random.crypto import randfloat as crypto_randfloat
+from random.crypto import randint as crypto_randint
+from random.crypto import random as crypto_random
+from random.pseudo import randbytes as pseudo_randbytes
+from random.pseudo import randfloat as pseudo_randfloat
+from random.pseudo import randint as pseudo_randint
+from random.pseudo import random as pseudo_random
+
+def main():
+    print("pseudo_random():            ", pseudo_random())
+    print("pseudo_randint(-5, 10):     ", pseudo_randint(-5, 10))
+    print("pseudo_randfloat(-1.0, 3.5):", pseudo_randfloat(-1.0, 3.5))
+    print("pseudo_randbytes(5):        ", pseudo_randbytes(5))
+    print()
+    print("crypto_random():            ", crypto_random())
+    print("crypto_randint(-5, 10):     ", crypto_randint(-5, 10))
+    print("crypto_randfloat(-1.0, 3.5):", crypto_randfloat(-1.0, 3.5))
+    print("crypto_randbytes(5):        ", crypto_randbytes(5))

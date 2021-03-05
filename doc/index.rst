@@ -1,0 +1,42 @@
+About
+=====
+
+Random numbers in the `Mys programming language`_.
+
+Project: https://github.com/mys-lang/package-random
+
+Examples
+========
+
+.. code-block:: python
+
+   from random.pseudo import random
+   from random.pseudo import randint
+   from random.pseudo import randfloat
+   from random.pseudo import randbytes
+
+   def main():
+       print("random():            ", random())
+       print("randint(-5, 10):     ", randint(-5, 10))
+       print("randfloat(-1.0, 3.5):", randfloat(-1.0, 3.5))
+       print("randbytes(5):        ", randbytes(5))
+
+Functions and types
+===================
+
+Pseudo random numbers
+---------------------
+
+Cheap pseudo random numbers.
+
+.. mysfile:: src/pseudo.mys
+
+Cryptographically safe random numbers
+-------------------------------------
+
+Random numbers that should be cryptographically safe. Much slower than
+pseudo random numbers.
+
+.. mysfile:: src/crypto.mys
+
+.. _Mys programming language: https://mys.readthedocs.io/en/latest/
