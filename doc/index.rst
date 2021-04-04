@@ -1,3 +1,5 @@
+|test|_
+
 About
 =====
 
@@ -39,4 +41,7 @@ pseudo random numbers.
 
 .. mysfile:: src/crypto.mys
 
-.. _Mys programming language: https://mys.readthedocs.io/en/latest/
+.. |test| image:: https://github.com/mys-lang/package-random/actions/workflows/pythonpackage.yml/badge.svg
+.. _test: https://github.com/mys-lang/package-random/actions/workflows/pythonpackage.yml
+
+.. _Mys programming language: https://mys-lang.org
