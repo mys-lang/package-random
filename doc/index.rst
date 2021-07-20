@@ -23,8 +23,8 @@ Examples
        print("randfloat(-1.0, 3.5):", randfloat(-1.0, 3.5))
        print("randbytes(5):        ", randbytes(5))
 
-Functions and types
-===================
+API
+===
 
 Pseudo random numbers
 ---------------------
