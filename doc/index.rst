@@ -27,7 +27,7 @@ Use pseudo random numbers.
 
 Build and run:
 
-.. code-block::
+.. code-block:: text
 
    random():             0.898648
    randint(-5, 10):      1
