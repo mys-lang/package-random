@@ -10,6 +10,8 @@ Project: https://github.com/mys-lang/package-random
 Examples
 ========
 
+Use pseudo random numbers.
+
 .. code-block:: python
 
    from random.pseudo import random
@@ -22,6 +24,15 @@ Examples
        print("randint(-5, 10):     ", randint(-5, 10))
        print("randfloat(-1.0, 3.5):", randfloat(-1.0, 3.5))
        print("randbytes(5):        ", randbytes(5))
+
+Build and run:
+
+.. code-block::
+
+   random():             0.898648
+   randint(-5, 10):      1
+   randfloat(-1.0, 3.5): 2.61118
+   randbytes(5):         b"\x40\x27\x00\x2e\x47"
 
 API
 ===
