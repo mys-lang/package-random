@@ -1,4 +1,6 @@
+|discord|_
 |test|_
+|stars|_
 
 About
 =====
@@ -27,8 +29,11 @@ Use pseudo random numbers.
 
 Build and run:
 
-.. code-block:: text
+.. code-block:: myscon
 
+   ❯ mys run
+    ✔ Reading package configuration (0 seconds)
+    ✔ Building (0.01 seconds)
    random():             0.898648
    randint(-5, 10):      1
    randfloat(-1.0, 3.5): 2.61118
@@ -52,7 +57,13 @@ pseudo random numbers.
 
 .. mysfile:: src/crypto.mys
 
+.. |discord| image:: https://img.shields.io/discord/777073391320170507?label=Discord&logo=discord&logoColor=white
+.. _discord: https://discord.gg/GFDN7JvWKS
+
 .. |test| image:: https://github.com/mys-lang/package-random/actions/workflows/pythonpackage.yml/badge.svg
 .. _test: https://github.com/mys-lang/package-random/actions/workflows/pythonpackage.yml
+
+.. |stars| image:: https://img.shields.io/github/stars/mys-lang/package-random?style=social
+.. _stars: https://github.com/mys-lang/package-random
 
 .. _Mys programming language: https://mys-lang.org
