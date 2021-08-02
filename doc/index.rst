@@ -14,7 +14,7 @@ Examples
 
 Use pseudo random numbers.
 
-.. code-block:: python
+.. code-block:: mys
 
    from random.pseudo import random
    from random.pseudo import randint
