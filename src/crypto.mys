@@ -68,6 +68,20 @@ def randbytes(length: u32) -> bytes:
 
     return value
 
+@generic(T)
+def shuffle(values: [T]):
+    """Shuffle the values in place.
+
+    """
+
+    length = i64(len(values))
+
+    for current in range(length):
+        other = randint(0, length - 1)
+        value = values[current]
+        values[current] = values[other]
+        values[other] = value
+
 @test
 def test_random():
     value = random()
@@ -92,3 +106,13 @@ def test_randfloat():
 def test_randbytes():
     assert len(randbytes(0)) == 0
     assert len(randbytes(5)) == 5
+
+@test
+def test_shuffle():
+    values = [1, 2, 3]
+
+    while True:
+        shuffle[i64](values)
+
+        if values != [1, 2, 3]:
+            break
