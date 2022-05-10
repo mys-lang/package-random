@@ -21,7 +21,7 @@ Use pseudo random numbers.
    from random.pseudo import randfloat
    from random.pseudo import randbytes
 
-   def main():
+   func main():
        print("random():            ", random())
        print("randint(-5, 10):     ", randint(-5, 10))
        print("randfloat(-1.0, 3.5):", randfloat(-1.0, 3.5))

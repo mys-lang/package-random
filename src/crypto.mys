@@ -8,7 +8,7 @@ c"""
 static std::random_device device;
 """
 
-def random() -> f64:
+func random() -> f64:
     """Returns a cryptographically safe random floating point number in
     the range [0.0, 1.0] (inclusive).
 
@@ -24,7 +24,7 @@ def random() -> f64:
 
     return value
 
-def randint(minimum: i64, maximum: i64) -> i64:
+func randint(minimum: i64, maximum: i64) -> i64:
     """Returns a cryptographically safe random integer number in the range
     [minimum, maximum] (inclusive).
 
@@ -40,7 +40,7 @@ def randint(minimum: i64, maximum: i64) -> i64:
 
     return value
 
-def randfloat(minimum: f64, maximum: f64) -> f64:
+func randfloat(minimum: f64, maximum: f64) -> f64:
     """Returns a cryptographically safe random floating point number in
     the range [minimum, maximum] (inclusive).
 
@@ -56,7 +56,7 @@ def randfloat(minimum: f64, maximum: f64) -> f64:
 
     return value
 
-def randbytes(length: u32) -> bytes:
+func randbytes(length: u32) -> bytes:
     """Returns given number of cryptographically safe random bytes.
 
     """
@@ -69,7 +69,7 @@ def randbytes(length: u32) -> bytes:
     return value
 
 @generic(T)
-def shuffle(values: [T]):
+func shuffle(values: [T]):
     """Shuffle the values in place.
 
     """
@@ -83,13 +83,13 @@ def shuffle(values: [T]):
         values[other] = value
 
 @test
-def test_random():
+func test_random():
     value = random()
     assert value >= 0.0
     assert value <= 1.0
 
 @test
-def test_randint():
+func test_randint():
     value = randint(-1, 2)
     assert value >= -1
     assert value <= 2
@@ -97,18 +97,18 @@ def test_randint():
     assert value in values
 
 @test
-def test_randfloat():
+func test_randfloat():
     value = randfloat(-2.5, 2.0)
     assert value >= -2.51
     assert value <= 2.01
 
 @test
-def test_randbytes():
+func test_randbytes():
     assert len(randbytes(0)) == 0
     assert len(randbytes(5)) == 5
 
 @test
-def test_shuffle():
+func test_shuffle():
     values = [1, 2, 3]
 
     while True:

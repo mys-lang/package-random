@@ -7,7 +7,7 @@ from random.pseudo import randfloat as pseudo_randfloat
 from random.pseudo import randint as pseudo_randint
 from random.pseudo import random as pseudo_random
 
-def main():
+func main():
     print("pseudo_random():            ", pseudo_random())
     print("pseudo_randint(-5, 10):     ", pseudo_randint(-5, 10))
     print("pseudo_randfloat(-1.0, 3.5):", pseudo_randfloat(-1.0, 3.5))
