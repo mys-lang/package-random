@@ -84,33 +84,28 @@ func shuffle(values: [T]):
         values[current] = values[other]
         values[other] = value
 
-@test
-func test_random():
+test random():
     value = random()
     assert value >= 0.0
     assert value <= 1.0
 
-@test
-func test_randint():
+test randint():
     value = randint(-1, 2)
     assert value >= -1
     assert value <= 2
     values: [i64] = [-1, 0, 1, 2]
     assert value in values
 
-@test
-func test_randfloat():
+test randfloat():
     value = randfloat(-2.5, 2.0)
     assert value >= -2.51
     assert value <= 2.01
 
-@test
-func test_randbytes():
+test randbytes():
     assert len(randbytes(0)) == 0
     assert len(randbytes(5)) == 5
 
-@test
-func test_shuffle():
+test shuffle():
     values = [1, 2, 3]
 
     while True:
